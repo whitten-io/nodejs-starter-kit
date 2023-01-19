@@ -1,0 +1,25 @@
+{
+	"name": "Ubuntu",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"TAG": "latest"
+		}
+	},
+	"remoteUser": "vscode",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"mikestead.dotenv",
+				"dbaeumer.vscode-eslint",
+				"hashicorp.terraform",
+				"ms-vscode.makefile-tools",
+				"ms-vscode.powershell",
+				"ZainChen.json",
+				"leizongmin.node-module-intellisense",
+				"ms-vscode.js-debug-nightly"
+			]
+		}
+	}
+	//"mounts": ["source=../,target=,type=bind,consistency=cached"]
+}
