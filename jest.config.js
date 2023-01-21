@@ -2,9 +2,13 @@
 const config = {
   verbose: true,
   rootDir: "./tests",
-  moduleFileExtensions: ["js", "json", "ts"],
+  moduleFileExtensions: [
+    "js",
+    "json",
+    "ts"
+  ],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest",
+    '^.+\\.(ts|tsx)$': 'ts-jest',
   },
 };
 

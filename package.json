@@ -1,25 +1,25 @@
 {
-  "name": "@whittenio/control-starter-kit",
+  "name": "@whittenio/nodejs-starter-kit",
   "version": "1.0.0",
   "author": "Rex Whitten <rex@whitten.io>",
   "license": "MIT",
-  "description": "Nest.JS + Node-Red starter kit.",
+  "description": "NodeJS Starter kit.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/whitten-io/control-starter-kit.git"
+    "url": "https://github.com/whitten-io/nodejs-starter-kit.git"
   },
-  "scripts": {
+   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "nest build",
+    "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
     "test": "jest --config ./jest.config.js",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./tests/jest-e2e.json",
-    "start": "nest start",
-    "start:dev": "nodemon --config nodemon.json ./src/main.ts",
-    "start:debug": "nest start --debug --watch",
+    "start": "node dist/server.js",
+    "start:dev" : "nodemon --config nodemon.json ./src/main.ts",
+    "start:debug": "node dist/server.js",
     "start:prod": "node dist/server.js",
     "dev:server": "ts-node src/main.ts",
     "docs": "typedoc",
@@ -29,9 +29,7 @@
     "typescript",
     "nodemon",
     "jest",
-    "eslint",
-    "Node-Red",
-    "Nest.Js"
+    "eslint"
   ],
   "devDependencies": {
     "@types/jest": "28.1.8",
@@ -56,12 +54,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^9.2.1",
-    "@nestjs/core": "^9.2.1",
-    "@nestjs/platform-express": "^9.2.1",
-    "@nestjs/testing": "^9.2.1",
-    "@types/node-red": "^1.2.1",
     "eslint-plugin-json": "^3.1.0",
-    "node-red": "^3.0.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.8.0"

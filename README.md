@@ -19,12 +19,6 @@
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/whitten-io/nodejs-starter-kit?style=for-the-badge)
 
-## Pages
-
-```
-<PAGE DIRECTORY>
-```
-
 ## Links
 
 > General
